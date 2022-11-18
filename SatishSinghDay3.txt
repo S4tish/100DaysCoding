@@ -1,0 +1,12 @@
+package src.com.company;
+// Java program to find the ASCII value of a character
+
+import java.util.Scanner;
+public class Day3 {
+    public static void main(String[] args) {
+        char c='z';
+        int ascii=c;
+        System.out.println("The ASCII value of " + c + " is :" + ascii);
+
+    }
+}
