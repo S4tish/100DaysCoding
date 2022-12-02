@@ -1,0 +1,19 @@
+package src.com.company;
+// Write a program to find the sum of digit of a number
+
+import java.util.Scanner;
+public class Day12 {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number 1 == ");
+        int a=sc.nextInt();
+        System.out.println("Enter the number 2 == ");
+        int b=sc.nextInt();
+        System.out.println("Enter the number 3 == ");
+        int c=sc.nextInt();
+
+        int d=a+b+c;
+        System.out.println("The total sum of the three number are == " + d);
+
+    }
+}
