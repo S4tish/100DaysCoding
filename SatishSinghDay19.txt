@@ -1,0 +1,44 @@
+package src.com.company;
+// java program to show that the number is armstrong number or not
+
+public class Day19 {
+    public static void main(String[] args) {
+        int num=407,len;
+
+        //function to get order(length)
+        len = order (num);
+
+        //check if armstrong
+        if(armstrong(num,len))
+            System.out.println(num + " is armstrong");
+        else
+            System.out.println(num + " is armstrong");
+    }
+
+    static int order(int x){
+        int len=0;
+        while(x!=0){
+            len++;
+            x=x/10;
+        }
+        return len;
+    }
+
+    static boolean armstrong(int num, int len){
+
+        int sum=0,temp, digit;
+        temp=num;
+
+        //loop to extract digit,find power and add to sum
+        while(temp!=0){
+
+            //extract digit
+            digit=temp%10;
+
+            //add to sum
+            sum=sum + (int)Math.pow(digit,len);
+            temp /=10;
+        };
+        return num==sum;
+    }
+}
