@@ -1,0 +1,14 @@
+package src.com.company;
+// write a program to find the area of the circle
+
+import java.util.Scanner;
+public class Day25 {
+    public static void main(String[] args) {
+        System.out.println("Enter the number");
+        Scanner sc=new Scanner(System.in);
+        int radius=sc.nextInt();
+        int a= (int) (3.14*radius*radius);
+        System.out.println("The area of the circle of given number is: " + a);
+
+    }
+}
