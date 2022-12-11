@@ -1,0 +1,13 @@
+package src.com.company;
+// write a program to find the maximum handshake of person
+
+import java.util.Scanner;
+public class Day26 {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the number");
+        int n=sc.nextInt();
+        int a=(n*(n-1)/2);
+        System.out.println(a);
+    }
+}
