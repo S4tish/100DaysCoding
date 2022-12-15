@@ -1,0 +1,14 @@
+package src.com.company;
+// Write a program to concatenate a string
+import java.util.Scanner;
+public class Day29 {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the first string ==");
+        String a=sc.nextLine();
+        System.out.print("Enter the second string ==");
+        String b=sc.nextLine();
+        String c=a+b;
+        System.out.println(" The concatenate of the first and second string is ==" + c);
+    }
+}

@@ -1,0 +1,21 @@
+package src.com.company;
+// Write a program to print length of the string without using strlen() function
+
+import java.util.Scanner;
+public class Day30 {
+    public static void main(String[] args) {
+
+        String str;
+        int len=0;
+        Scanner sc=new Scanner(System.in);
+
+        System.out.print("Enter the String :: ");
+        str=sc.nextLine();
+
+        char[] strChars=str.toCharArray();
+        for(char ch:strChars)
+            len++;
+
+        System.out.println("\nLength of String = " + len);
+    }
+}
