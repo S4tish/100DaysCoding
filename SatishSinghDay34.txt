@@ -1,0 +1,13 @@
+package src.com.company;
+// Write a program to remove brackets from an algebraic expression
+
+import java.util.Scanner;
+public class Day34 {
+    public static void main(String[] args) {
+        System.out.print(" Enter the algebraic expression :: ");
+        Scanner sc=new Scanner(System.in);
+        String str=sc.nextLine();
+        String newstr=str.replaceAll("[(){}]","");
+        System.out.print(" Expression without brackets are :: " + newstr);
+    }
+}
