@@ -1,0 +1,31 @@
+package src.com.company;
+// Write a program to count the sum of numbers in a string
+
+import java.io.*;
+public class Day35 {
+
+    static int findSum(String str){
+        String temp="0";
+
+        int sum=0;
+
+        for(int i=0;i<str.length();i++){
+            char ch=str.charAt(i);
+
+            if(Character.isDigit(ch))
+                temp+=ch;
+            else{
+                sum+=Integer.parseInt(temp);
+
+                temp="0";
+            }
+        }
+        return sum+Integer.parseInt(temp);
+    }
+
+    public static void main(String[] args) {
+        String str="He6llo5";
+
+        System.out.println(findSum(str));
+    }
+}
