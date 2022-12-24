@@ -1,0 +1,53 @@
+package src.com.company;
+// write a program to check if two string are anagram or not
+
+import java.util.Scanner;
+public class Day39 {
+    public static void main(String[] args) {
+        String str1,str2;
+        //Scanner sc=new Scanner (System.in);
+        System.out.println("Enter the two string");
+        Scanner sc=new Scanner (System.in);
+
+        str1=sc.nextLine();
+        str2=sc.nextLine();
+
+        //convert string into char array
+        char arr1[]=str1.toCharArray();
+        char arr2[]=str2.toCharArray();
+
+        if(arr1.length!=arr2.length){
+            System.out.println(" String are not anagram");
+        }else{
+
+            //apply bubble sort
+            for(int i=0;i<arr1.length;i++){
+                for(int j=i+1;j<arr1.length-1;j++){
+                    if(arr1[i]>arr1[j]){
+                        char temp=arr1[i];
+                        arr1[i]=arr1[j];
+                        arr1[j]=temp;
+                    }
+                    if(arr2[i]>arr2[j]){
+                        char temp=arr2[j];
+                        arr2[i]=arr1[j];
+                        arr2[j]=temp;
+                    }
+                }
+            }
+
+            //convert char array into string
+            String str3=String.valueOf(arr1);
+            String str4=String.valueOf(arr2);
+
+            // check if both are equal or not id it is equal then it is anagram if not equal then it is not
+            // anagram
+            if(str3.equals(str4)){
+                System.out.println("String are anagram with each other");
+            }else{
+                System.out.println("String are not anagram with each other");
+            }
+        }
+
+    }
+}
