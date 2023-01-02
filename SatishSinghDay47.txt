@@ -1,0 +1,49 @@
+package src.com.company;
+// write a program to find the longest palindrome in an array
+
+import java.util.*;
+public class Day47 {
+
+    static boolean isPalindrome(int n){
+        int divisor=1;
+        while(n/divisor>=10)
+            divisor*=10;
+
+        while(n!=0){
+            int leading=n/divisor;
+            int trailing=n%10;
+
+            if(leading !=trailing)
+                return false;
+
+            n=(n%divisor)/10;
+
+            divisor=divisor/100;
+        }
+        return true;
+    }
+
+    // Function to find the largest palindrome number
+    static int largestPalindrome(int []A, int n){
+
+        Arrays.sort(A);
+
+        for(int i=n-1;i>=0;--i){
+
+            //if number is paindrome
+            if(isPalindrome(A[i]))
+                return A[i];
+        }
+
+        // if no palindrome is found
+        return -1;
+    }
+
+    public static void main(String[] args) {
+
+        int []A={12, 232,1000001,121,10456};
+        int n=A.length;
+        System.out.println(largestPalindrome(A,n));
+    }
+
+}
