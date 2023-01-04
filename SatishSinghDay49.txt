@@ -1,0 +1,21 @@
+package src.com.company;
+import java.util.Arrays;
+public class Day49 {
+    public static void main(String[] args) {
+        int[] X = {4, 1, 2, 3};
+        int[] Y = {5, 6, 7, 8};
+
+        // Sort the two arrays
+        Arrays.sort(X);
+        Arrays.sort(Y);
+
+        // Calculate the minimum dot product
+        int dotProduct = 0;
+        for (int i = 0; i < X.length; i++) {
+            dotProduct += X[i] * Y[Y.length - 1 - i];
+        }
+
+        System.out.println("Minimum dot product: " + dotProduct);
+    }
+}
+
