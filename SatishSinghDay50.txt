@@ -1,0 +1,25 @@
+package src.com.company;
+// write a program to find the sum of square of element of a array
+
+import java.util.*;
+import java.io.*;
+public class Day50 {
+
+    static long Square(int n,int arr[]){
+        long a=0;
+        for(int i=0;i<n;i++){
+            a=a+arr[i]*arr[i];
+        }
+        return a;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        System.out.println(Square(n,arr));
+    }
+}
