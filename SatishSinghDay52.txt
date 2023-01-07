@@ -1,0 +1,24 @@
+package src.com.company;
+// write a program to reverse the array
+
+import java.util.Scanner;
+public class Day52 {
+    public static void main(String[] args) {
+
+        int n,res,i,j=0;
+        Scanner sc=new Scanner(System.in);
+        System.out.print(" Enter the number of element in an array: ");
+        n=sc.nextInt();
+        int array[]=new int[n];
+        int rev[]=new int[n];
+        System.out.print("Enter " + n + " elements: ");
+        for( i=0;i<n;i++){
+            array[i]=sc.nextInt();
+        }
+        System.out.print(" Reverse of an array is: ");
+        for(i=n;i>0;i--,j++){
+            rev[j]=array[i-1];
+            System.out.println(rev[j]);
+        }
+    }
+}
