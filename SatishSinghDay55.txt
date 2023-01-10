@@ -1,0 +1,27 @@
+package src.com.company;
+// Print the sum of maximum scalar product 0f 2 vector
+
+import java.io.*;
+public class Day55 {
+
+    static int n=3;
+
+    static int dotProduct(int vect_A[], int vect_B[]){
+        int product=0;
+        for(int i=0;i<n;i++)
+            product=product+vect_A[i]*vect_B[i];
+        return product;
+    }
+    
+    
+
+    public static void main(String[] args) {
+        int vect_A[]={1,2,3,4};
+        int vect_B[]={5,6,7,8};
+        
+
+        System.out.println(" Dot product: ");
+        System.out.println(dotProduct(vect_A,vect_B));
+    }
+
+}
