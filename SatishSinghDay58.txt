@@ -1,0 +1,21 @@
+package src.com.company;
+// Bucket filling 
+
+import java.util.Scanner;
+public class Day58 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print(" Enter the number of test cases: ");
+        int T = sc.nextInt(); // number of test cases
+        for (int i = 0; i < T; i++) {
+            System.out.println(" Enter the capacity of the tank: ");
+            int K = sc.nextInt(); // capacity of the bucket
+            System.out.print(" Enter the amount of water in the bucket: ");
+            int X = sc.nextInt(); // amount of water in the bucket
+            System.out.print(" Extra water that can be filled in bucket: ");
+            int extraWater = K - X; // calculate the extra water that can be filled
+            System.out.println(extraWater); // print the result
+        }
+    }
+}
+
