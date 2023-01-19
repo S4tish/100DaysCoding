@@ -1,0 +1,24 @@
+package src.com.company;
+
+import java.util.Scanner;
+public class Day63 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt();
+        for (int i = 0; i < T; i++) {
+            int w1 = sc.nextInt();
+            int w2 = sc.nextInt();
+            int x1 = sc.nextInt();
+            int x2 = sc.nextInt();
+            int M = sc.nextInt();
+            int weightGain = w2 - w1;
+            int minGain = x1 * M;
+            int maxGain = x2 * M;
+            if (weightGain >= minGain && weightGain <= maxGain) {
+                System.out.println("1");
+            } else {
+                System.out.println("0");
+            }
+        }
+    }
+}
