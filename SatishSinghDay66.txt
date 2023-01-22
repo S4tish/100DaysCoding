@@ -1,0 +1,38 @@
+ Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt();
+        for (int i = 0; i < T; i++) {
+            String A = sc.next();
+            String B = sc.next();
+            boolean flag = false;
+            for (int j = 0; j < A.length(); j++) {
+                for (int k = j + 1; k <= A.length(); k++) {
+                    String s1 = A.substring(j, k);
+                    for (int l = 0; l < B.length(); l++) {
+                        for (int m = l + 1; m <= B.length(); m++) {
+                            String s2 = B.substring(l, m);
+                            if (isPalindrome(s1 + s2)) {
+                                flag = true;
+                                break;
+                            }
+                        }
+                        if (flag) break;
+                    }
+                    if (flag) break;
+                }
+                if (flag) break;
+            }
+            if (flag) System.out.println("Yes");
+            else System.out.println("No");
+        }
+        sc.close();
+    }
+
+    private static boolean isPalindrome(String s) {
+        int left = 0;
+        int right = s.length() - 1;
+        while (left < right) {
+            if (s.charAt(left) != s.charAt(right)) return false;
+            left++;
+            right--;
+        }
+        return true;
