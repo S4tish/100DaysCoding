@@ -1,0 +1,29 @@
+ Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt();
+        for (int i = 0; i < T; i++) {
+            int S = sc.nextInt();
+            int W1 = sc.nextInt();
+            int W2 = sc.nextInt();
+            int W3 = sc.nextInt();
+            int[] widths = {W1, W2, W3};
+            int[] dp = new int[S + 1];
+            for (int j = 0; j <= S; j++) {
+                dp[j] = Integer.MAX_VALUE;
+            }
+            dp[0] = 0;
+            for (int j = 0; j < widths.length; j++) {
+                for (int k = S; k >= 0; k--) {
+                    if (dp[k] != Integer.MAX_VALUE) {
+                        if (k + widths[j] <= S) {
+                            dp[k + widths[j]] = Math.min(dp[k + widths[j]], dp[k] + 1);
+                        }
+                    }
+                }
+            }
+            int res = Integer.MAX_VALUE;
+            for (int j = 0; j <= S; j++) {
+                res = Math.min(res, dp[j]);
+            }
+            System.out.println(res);
+        }
+        sc.close();
