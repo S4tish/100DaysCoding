@@ -1,0 +1,33 @@
+package src.com.company;
+
+import java.io.*;
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+
+public class Day68 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        Set<Integer> set = new HashSet<>();
+        for(int i=0; i<n; i++) {
+            int type = sc.nextInt();
+            int num = sc.nextInt();
+            switch(type) {
+                case 1:
+                    set.add(num);
+                    break;
+                case 2:
+                    set.remove(num);
+                    break;
+                case 3:
+                    if (((HashSet<?>) set).contains(num)) {
+                        System.out.println("Yes");
+                    } else {
+                        System.out.println("No");
+                    }
+                    break;
+            }
+        }
+    }
+}
