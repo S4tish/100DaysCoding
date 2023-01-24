@@ -1,0 +1,28 @@
+package src.com.company;
+
+class Triangle {
+    public void display() {
+        System.out.println("I am a triangle");
+    }
+}
+
+class Isosceles extends Triangle {
+    public void display() {
+        System.out.println("I am an isosceles triangle");
+        super.display();
+    }
+}
+
+class Equilateral extends Isosceles {
+    public void display() {
+        System.out.println("I am an equilateral triangle");
+        super.display();
+    }
+}
+
+public class Day69 {
+    public static void main(String[] args) {
+        Equilateral eq = new Equilateral();
+        eq.display();
+    }
+}
