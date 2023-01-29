@@ -1,0 +1,24 @@
+package src.com.company;
+
+import java.util.Scanner;
+public class Day72 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int q = sc.nextInt();
+        StringBuilder sb = new StringBuilder();
+        while (q-- > 0) {
+            String line = sc.next();
+            int i = sc.nextInt();
+            if (line.charAt(0) == '+') {
+                String str = sc.next();
+                if (i == 0) {
+                    sb.insert(0, str);
+                } else {
+                    sb.insert(i, str);
+                }
+            } else {
+                System.out.println(sb.substring(i - 1, i - 1 + sc.nextInt()));
+            }
+        }
+    }
+}
